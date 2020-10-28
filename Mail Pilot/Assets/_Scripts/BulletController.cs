@@ -9,6 +9,7 @@ public class BulletController : MonoBehaviour
     public Boundary boundary;
 
     //TODO: create a reference to the BulletPoolManager
+    public GameObject bulletPoolManager;
 
     void Start()
     {
@@ -19,8 +20,8 @@ public class BulletController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move();
-        CheckBounds();
+         Move();
+         CheckBounds();
     }
 
     private void Move()
@@ -34,7 +35,7 @@ public class BulletController : MonoBehaviour
         {
             //TODO: This code needs to change to use the BulletPoolManager's
             //TODO: ResetBullet function which will return the bullet to the pool
-            Destroy(this.gameObject);
+            bulletPoolManager.GetComponent<BulletPoolManager>().ResetBullet(this.gameObject);
         }
     }
 }
