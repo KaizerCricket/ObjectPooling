@@ -45,4 +45,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 7008785284576285171, guid: bb06c5ba2d15c2647b82760f50c866d5, type: 3}
   gameController: {fileID: 0}
-  maxBullets: 5
+  maxBullets: 3
